@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+html{
+    font-size: 60.5%;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    color: white;
+    z-index: 999;
+    opacity: 0.95;
+    left: -100%;
+    transition: all 500ms linear;
+}
+
+.active{
+    left: 0;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+nav img{
+    width: 20px;
+    height: 20px;
+    margin: 30px;
+}
+
+nav .menu-content{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav .first-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    font-weight: lighter;
+    font-family: 'Work Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav .menu-content .btn a{
+    color: #fff;
+    background-color: red;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: lighter;
+    font-family: cursive,'Times New Roman', Times, serif;
+    margin: 5px;
+}
+
+nav .menu-content .btn a:hover{
+    background-color: blue;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    height: 10%;
+    padding: 10px;
+    color: #111;
+    font-family: "Satisfy", Georgia, 'Times New Roman', Times, serif;
+}
+
+header .enter a{
+    border: 2px solid #111;
+    color:#111;
+    padding: 10px;
+    margin: 30px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+header .enter a:hover{
+    border: 2px solid blue;
+    color: blue;
+}
+section{
+    display: flex;
+    align-items: center;
+    height: 90%;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+section .text{
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.circles{
+    animation-name: play;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes play{
+    0%{
+        transform: scale(1.2);
+    }
+    25%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+section .circle1{
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background-color: blue;
+    z-index: -1;
+    opacity: 0.2;
+    bottom: 13vw;
+    left: 5vw;
+}
+
+section .circle2{
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    background-color: green;
+    z-index: -1;
+    opacity: 0.2;
+    top: 20vw;
+    right: 5vw;
+}
+
+section .circle3{
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    background-color: yellow;
+    z-index: -1;
+    opacity: 0.2;
+    bottom: 12vw;
+    left: 65vw;
+}
+
+section .circle4{
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    background-color: red;
+    z-index: -1;
+    opacity: 0.2;
+    top: 23vw;
+    left: 35vw;
+}
+
+section .img img{
+    max-width: 100%;
+    height: auto;
+}
+section .text h1{
+    font-size: 60px;
+    font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
+}
+
+section .text h4 {
+    font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
+    color: grey;
+}
+
+section .text .anchor a{
+    color: #fff;
+    background-color:rgb(209, 53, 53);
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: lighter;
+    font-family: cursive,'Times New Roman', Times, serif;
+}
+
+section .text .anchor a:hover{
+    background-color: red;
+}
+
+@media (max-width: 900px) {
+    section{
+        flex-direction: column;
+    }
+    nav .first-line{
+        flex-direction: column;
+    }
+  }
